@@ -17,11 +17,11 @@ include(DuneMacros)
 
 # start a dune project with information from dune.module
 dune_project()
-dune_enable_all_packages()
-add_subdirectory("src")
+dune_enable_all_packages(INCLUDE_DIRS ${dune-xt-common_SOURCE_DIR}/dune
+                         MODULE_LIBRARIES xtvis
+                         )
 add_subdirectory("dune")
-add_subdirectory("doc")
 add_subdirectory("cmake/modules")
-
+add_subdirectory("python")
 # finalize the dune project, e.g. generating config.h etc.
 finalize_dune_project(GENERATE_CONFIG_H_CMAKE)

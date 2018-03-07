@@ -7,4 +7,4 @@ Module: dune-visibility-demo
 Version: 666
 Maintainer: rene.milk@wwu.de
 #depending on
-Depends: dune-gdt
+Depends: dune-xt-la dune-xt-grid dune-xt-functions
