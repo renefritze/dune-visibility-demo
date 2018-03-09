@@ -20,4 +20,4 @@ setup(name='xtvis',
       zip_safe = 0,
       package_data = {'': ['*.so']},
       install_requires=[],
-      scripts=['test_xtvis.py'])
+      scripts=['test/test_visibility.py'])
