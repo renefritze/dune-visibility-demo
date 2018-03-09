@@ -27,6 +27,10 @@ PYBIND11_MODULE(_bbb, m)
   });
 
   m.def("count", []() {
-    return std::tuple<int,int>{xtvis::HiddenSingleton::instance().count, xtvis::VisibleSingleton::instance().count};
+    return std::tuple<int, int>{xtvis::HiddenSingleton::instance().count, xtvis::VisibleSingleton::instance().count};
+  });
+  m.def("inc", []() {
+    xtvis::HiddenSingleton::instance().count++;
+    xtvis::VisibleSingleton::instance().count++;
   });
 }

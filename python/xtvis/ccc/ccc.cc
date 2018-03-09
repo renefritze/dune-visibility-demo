@@ -27,6 +27,6 @@ PYBIND11_MODULE(_ccc, m)
   });
 
   m.def("count", []() {
-    return std::tuple<int,int>{xtvis::HiddenSingleton::instance().count, xtvis::VisibleSingleton::instance().count};
+    return std::tuple<int, int>{xtvis::HiddenSingleton::instance().count, xtvis::VisibleSingleton::instance().count};
   });
 }
