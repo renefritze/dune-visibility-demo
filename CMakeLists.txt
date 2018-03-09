@@ -29,8 +29,11 @@ dune_xt_install_python_package(PATH python)
 include_dependent_binary_python_dirs()
 # do not change order here
 include(DuneUtils)
-if(dune-pybindxi_FOUND)
-  add_subdirectory(python)
-endif()
+add_subdirectory(python)
+
+add_format(${CMAKE_CURRENT_SOURCE_DIR})
+add_tidy(${CMAKE_CURRENT_SOURCE_DIR})
+add_pylicense()
+
 # finalize the dune project, e.g. generating config.h etc.
 finalize_dune_project(GENERATE_CONFIG_H_CMAKE)

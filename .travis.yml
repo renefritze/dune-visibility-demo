@@ -4,9 +4,9 @@ language: generic
 services: docker
 
 before_script:
-    - export IMAGE="dunecommunity/dune-xt-common-testing_${DOCKER_TAG}:${TRAVIS_BRANCH}"
+    - export IMAGE="dunecommunity/dune-xt-docker_base_${DOCKER_TAG}:${TRAVIS_BRANCH}"
     # get image with fallback to master branch of the super repo
-    - docker pull ${IMAGE} || export IMAGE="dunecommunity/dune-xt-common-testing_${DOCKER_TAG}:master" ; docker pull ${IMAGE}
+    - docker pull ${IMAGE} || export IMAGE="dunecommunity/dune-xt-docker_base_${DOCKER_TAG}:master" ; docker pull ${IMAGE}
     - export ENV_FILE=${HOME}/env
     - python3 ./.travis.make_env_file.py
     - export MY_MODULE=dune-visibilty-demo
