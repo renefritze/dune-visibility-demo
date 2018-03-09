@@ -45,7 +45,7 @@ jobs:
     env: DOCKER_TAG=debian_gcc_full
   - stage: Test
     env: DOCKER_TAG=arch_gcc_full
-    - stage: Test
+  - stage: Test
     env: DOCKER_TAG=debian_clang_full
   - stage: Test
     env: DOCKER_TAG=arch_clang_full
