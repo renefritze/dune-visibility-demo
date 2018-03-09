@@ -1,6 +1,4 @@
-#ifndef DUNE_VISIBILITY_DEMO_HH
-#define DUNE_VISIBILITY_DEMO_HH
+#include "visibility-demo.hh"
 
-// add your classes here
-
-#endif // DUNE_VISIBILITY_DEMO_HH
+auto fr = xtvis::VisibleSingleton::instance();
+auto gt = xtvis::HiddenSingleton::instance();

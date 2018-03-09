@@ -4,11 +4,11 @@
 #include <dune/common/visibility.hh>
 
 namespace xtvis {
-  struct VisibleSingleton {
+  struct DUNE_EXPORT VisibleSingleton {
 
     DUNE_EXPORT static VisibleSingleton& instance() {
-      static VisibleSingleton s;
-      return s;
+      static VisibleSingleton visible_instance;
+      return visible_instance;
     }
 
     int count;
@@ -21,8 +21,8 @@ namespace xtvis {
   struct HiddenSingleton {
 
     static HiddenSingleton& instance() {
-      static HiddenSingleton s;
-      return s;
+      static HiddenSingleton hidden_instance;
+      return hidden_instance;
     }
 
     int count;
